@@ -1,3 +1,51 @@
-bin/
-.settings/
+# Compiled class files
 *.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Eclipse specific files
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+out/
+
+# VS Code settings folder
+.vscode/
+
+# Maven / Gradle folders
+target/
+build/
+
+# Gradle Wrapper
+.gradle/
+
+# Others
+.DS_Store
+Thumbs.db
+
+# Node dependencies (if any)
+node_modules/
+
+# Mac system files
+.AppleDouble
+.LSOverride
