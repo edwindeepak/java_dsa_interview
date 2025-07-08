@@ -31,6 +31,28 @@ java HelloWorld
 
 ---
 
+## 🗂️ Folder Structure
+```text
+java_dsa_interview/
+├── README.md # Overview and usage instructions
+├── problem-tracker.csv # Progress tracker for problems
+├── src/ # Java source code
+│ ├── basics/ # Java syntax, variables, loops, etc.
+│ ├── collections/ # List, Set, Map, Queue implementations
+│ ├── arrays/ # Array-based problems
+│ ├── strings/ # String manipulation problems
+│ ├── linkedlists/ # Singly & doubly linked lists
+│ ├── stacksqueues/ # Stack and queue problems
+│ ├── trees/ # Binary trees, BSTs, traversals
+│ ├── graphs/ # Graph traversal, BFS, DFS
+│ ├── recursion/ # Recursive solutions
+│ ├── sortingsearching/ # Sorting algorithms and search techniques
+│ ├── dynamicprogramming/ # DP techniques and problems
+│ └── concurrency/ # Java multithreading and concurrency
+├── concepts/ # Markdown notes on Java and algorithms
+└── utilities/ # Helper classes and common utilities
+```
+
 ## 📈 Problem Tracker
 
 Use the `problem-tracker.csv` to track progress on each topic/problem.
