@@ -105,3 +105,8 @@ This is a personal learning repository, but suggestions, corrections, and improv
 > Stay consistent. Stay curious. Keep coding!
 
 — *Edwin Deepak*
+
+## Progress
+
+- [x] Lesson 1: Java Basics — Variables, Data Types, and I/O
+- [ ] Lesson 2: Control Flow

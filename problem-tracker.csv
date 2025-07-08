@@ -1,4 +1,4 @@
-Problem ID,Topic,Difficulty,Status,Notes
-1,Arrays,Easy,Unsolved,
-2,LinkedList,Medium,Solved,Used recursion
-3,Recursion,Hard,Unsolved,Need to revise
+ID,Topic,Difficulty,Status,Notes
+L1,Java Basics,Easy,Completed,"Variables,Data Types,and I/O"
+L2,Control Flow,Easy,Completed,"if-else, switch, for and while loops"
+L3,Collections,Easy,Completed,"Lists, Sets, and Maps basics"
