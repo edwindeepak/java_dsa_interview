@@ -17,5 +17,12 @@ public class MainTest {
 
         int longestOpt = SlidingWindowUtils.longestSubstringOptimized(s);
         System.out.println("Longest Substring Optimized: " + longestOpt);
+        
+        System.out.println("Reverse Brute: " + StringUtils.reverseBrute("This is a wonderful day"));
+        System.out.println("Reverse InBuilt: " + StringUtils.reverseInBuilt("This is a wonderful day"));
+        System.out.println("Reverse TwoPointer: " + StringUtils.reverseTwoPointer("This is a wonderful day"));
+        System.out.println("Reverse NoSpaces: " + StringUtils.reverseNoSpaces("This is a wonderful day"));
+
+        
     }
 }

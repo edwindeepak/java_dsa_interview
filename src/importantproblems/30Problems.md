@@ -6,8 +6,8 @@
 
 ---
 
-- [ ] **1. Two Sum** — *ArrayUtils*
-- [ ] **2. Longest Substring Without Repeating Characters** — *StringUtils / SlidingWindowUtils*
+- [ X ] **1. Two Sum** — *ArrayUtils*
+- [ X ] **2. Longest Substring Without Repeating Characters** — *StringUtils / SlidingWindowUtils*
 - [ ] **3. Reverse a String** — *StringUtils*
 - [ ] **4. Reverse Words in a Sentence** — *StringUtils*
 - [ ] **5. String Palindrome Check** — *StringUtils*
