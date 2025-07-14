@@ -8,10 +8,10 @@
 
 - [ X ] **1. Two Sum** — *ArrayUtils*
 - [ X ] **2. Longest Substring Without Repeating Characters** — *StringUtils / SlidingWindowUtils*
-- [ ] **3. Reverse a String** — *StringUtils*
-- [ ] **4. Reverse Words in a Sentence** — *StringUtils*
-- [ ] **5. String Palindrome Check** — *StringUtils*
-- [ ] **6. Number Palindrome Check** — *ArrayUtils / Misc*
+- [ X ] **3. Reverse a String** — *StringUtils*
+- [ X ] **4. Reverse Words in a Sentence** — *StringUtils*
+- [ X ] **5. String Palindrome Check** — *StringUtils*
+- [ X ] **6. Number Palindrome Check** — *ArrayUtils / Misc*
 - [ ] **7. Anagram Check** — *StringUtils*
 - [ ] **8. Count Character Frequencies** — *StringUtils*
 - [ ] **9. First Non-Repeating Character** — *StringUtils*
