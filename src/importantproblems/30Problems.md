@@ -12,10 +12,10 @@
 - [ X ] **4. Reverse Words in a Sentence** — *StringUtils*
 - [ X ] **5. String Palindrome Check** — *StringUtils*
 - [ X ] **6. Number Palindrome Check** — *ArrayUtils / Misc*
-- [ ] **7. Anagram Check** — *StringUtils*
-- [ ] **8. Count Character Frequencies** — *StringUtils*
-- [ ] **9. First Non-Repeating Character** — *StringUtils*
-- [ ] **10. Remove Duplicates from Array** — *ArrayUtils*
+- [ X ] **7. Anagram Check** — *StringUtils*
+- [ X ] **8. Count Character Frequencies** — *StringUtils*
+- [ X ] **9. First Non-Repeating Character** — *StringUtils*
+- [ X ] **10. Remove Duplicates from Array** — *ArrayUtils*
 - [ ] **11. Remove Duplicates from String** — *StringUtils*
 - [ ] **12. Find Missing Number in Array** — *ArrayUtils*
 - [ ] **13. Second Largest Number in Array** — *ArrayUtils*
