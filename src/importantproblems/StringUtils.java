@@ -1,10 +1,9 @@
 package importantproblems;
 
-import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
-// Removed java.lang.StringBuilder and java.lang.Character imports as they are in java.lang and automatically imported.
-// Removed java.util.Map.Entry as Map import is sufficient for Map.Entry usage.
+import java.util.Set;
 
 public class StringUtils {
 
@@ -12,12 +11,10 @@ public class StringUtils {
     // 🔁 Reverse a String
     // -----------------------------------------------
 
-    // 1. Using in-built reverse (StringBuilder)
     public static String reverseInBuilt(String input) {
         return new StringBuilder(input).reverse().toString();
     }
 
-    // 2. Brute-force: append characters from end
     public static String reverseBrute(String input) {
         String reversed = "";
         for (int i = input.length() - 1; i >= 0; i--) {
@@ -26,7 +23,6 @@ public class StringUtils {
         return reversed;
     }
 
-    // 3. Two-pointer approach: swap in char array
     public static String reverseTwoPointer(String input) {
         char[] arr = input.toCharArray();
         int left = 0, right = arr.length - 1;
@@ -40,7 +36,6 @@ public class StringUtils {
         return new String(arr);
     }
 
-    // 4. Reverse without spaces
     public static String reverseNoSpaces(String input) {
         input = input.replace(" ", "");
         return reverseTwoPointer(input);
@@ -50,7 +45,6 @@ public class StringUtils {
     // 🔁 Reverse Words / Sentences
     // -----------------------------------------------
 
-    // 1. Reverse each word (but not order)
     public static String reverseEachWord(String sentence) {
         StringBuilder result = new StringBuilder();
         String[] words = sentence.split(" ");
@@ -60,7 +54,6 @@ public class StringUtils {
         return result.toString().trim();
     }
 
-    // 2. Reverse only the word order (not characters)
     public static String reverseWordOrder(String sentence) {
         String[] words = sentence.split(" ");
         int left = 0, right = words.length - 1;
@@ -75,17 +68,16 @@ public class StringUtils {
     }
 
     // -----------------------------------------------
-    // 🔍 Palindrome Check
+    // 🔍 Palindrome Check (ignores non-alphanumeric, case-insensitive)
     // -----------------------------------------------
 
     public static boolean isPalindrome(String input) {
-        input = input.toLowerCase(); // Ensure case-insensitivity
+        input = input.toLowerCase();
         int left = 0, right = input.length() - 1;
         while (left < right) {
             char l = input.charAt(left);
             char r = input.charAt(right);
 
-            // Skip non-alphanumeric characters for palindrome check
             if (!Character.isLetterOrDigit(l)) {
                 left++;
                 continue;
@@ -104,80 +96,77 @@ public class StringUtils {
     }
 
     // -----------------------------------------------
-    // ✅ Anagram Check
+    // ✅ Anagram Check (case-insensitive)
     // -----------------------------------------------
 
     public static boolean anagramcheck(String a, String b) {
-        if (a.length() != b.length()) {
-            return false;
-        }
+        if (a.length() != b.length()) return false;
 
         a = a.toLowerCase();
         b = b.toLowerCase();
 
         int[] counts = new int[26];
-
         for (int i = 0; i < a.length(); i++) {
             counts[a.charAt(i) - 'a']++;
             counts[b.charAt(i) - 'a']--;
         }
 
         for (int count : counts) {
-            if (count != 0) {
-                return false;
-            }
+            if (count != 0) return false;
         }
         return true;
     }
 
     // -----------------------------------------------
-    // ✅ Count Character Frequencies
+    // ✅ Count Character Frequencies (case-insensitive)
     // -----------------------------------------------
 
     public static Map<Character, Integer> charFrequencies(String s) {
-        String processedS = s.toLowerCase();
+        s = s.toLowerCase();
         Map<Character, Integer> frequency = new LinkedHashMap<>();
-
-        for (char c : processedS.toCharArray()) {
+        for (char c : s.toCharArray()) {
             frequency.put(c, frequency.getOrDefault(c, 0) + 1);
         }
         return frequency;
     }
 
     // -----------------------------------------------
-    // ✅ First Non-Repeating Character
-    // Using int array for frequency (optimized for limited alphabet)
+    // ✅ First Non-Repeating Character (lowercase letters only)
     // -----------------------------------------------
 
     public static char firstNonRepeatingChar(String s) {
-        // Normalize to lowercase to handle case-insensitivity (e.g., 'A' and 'a' count as same)
-        String loweredS = s.toLowerCase();
-
-        // Array to store counts for 'a' through 'z'.
-        // Index 0 for 'a', 1 for 'b', ..., 25 for 'z'.
+        String lowered = s.toLowerCase();
         int[] counts = new int[26];
 
-        // First Pass: Count frequencies of letters
-        for (char x : loweredS.toCharArray()) {
-            // CRITICAL: Only process if it's a lowercase English letter
-            if (x >= 'a' && x <= 'z') {
-                counts[x - 'a']++;
+        for (char c : lowered.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                counts[c - 'a']++;
             }
         }
 
-        // Second Pass: Iterate the ORIGINAL (normalized) string again
-        // to find the first character that has a count of 1.
-        for (char x : loweredS.toCharArray()) {
-            // CRITICAL: Again, only check if it's a lowercase English letter
-            if (x >= 'a' && x <= 'z') {
-                if (counts[x - 'a'] == 1) { // If count is 1, it's non-repeating
-                    return x; // Return this character immediately (it's the first one found)
-                }
+        for (char c : lowered.toCharArray()) {
+            if (c >= 'a' && c <= 'z' && counts[c - 'a'] == 1) {
+                return c;
             }
         }
 
-        // If the loop finishes, it means no non-repeating letter was found.
-        // Return '\0' (null character) as per problem specification.
-        return '\0';
+        return '\0'; // null character if none found
+    }
+
+    // -----------------------------------------------
+    // ✅ Remove Duplicate Characters (preserves order)
+    // -----------------------------------------------
+
+    public static String removeDupsString(String s) {
+        Set<Character> seen = new LinkedHashSet<>();
+        StringBuilder sb = new StringBuilder();
+
+        for (char c : s.toCharArray()) {
+            if (!seen.contains(c)) {
+                seen.add(c);
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }

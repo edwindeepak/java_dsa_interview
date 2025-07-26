@@ -5,7 +5,13 @@ import java.util.Set;
 
 public class SlidingWindowUtils {
 
-    // Longest Substring Without Repeating Characters - Brute Force
+    /**
+     * Find length of longest substring without repeating characters using brute force.
+     * Time Complexity: O(n^2), Space Complexity: O(min(n, m)) where m = charset size.
+     * 
+     * @param s input string
+     * @return length of longest substring without repeating characters
+     */
     public static int longestSubstringBrute(String s) {
         int max = 0;
         for (int i = 0; i < s.length(); i++) {
@@ -22,7 +28,13 @@ public class SlidingWindowUtils {
         return max;
     }
 
-    // Longest Substring Without Repeating Characters - Optimized Sliding Window
+    /**
+     * Find length of longest substring without repeating characters using optimized sliding window.
+     * Time Complexity: O(n), Space Complexity: O(min(n, m)) where m = charset size.
+     * 
+     * @param s input string
+     * @return length of longest substring without repeating characters
+     */
     public static int longestSubstringOptimized(String s) {
         int max = 0, start = 0, end = 0;
         Set<Character> set = new HashSet<>();

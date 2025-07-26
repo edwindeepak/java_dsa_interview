@@ -3,8 +3,11 @@ package importantproblems;
 public class Misc {
 
     /**
-     * Check if a number is a palindrome using String conversion.
-     * Time: O(n), Space: O(n)
+     * Check if an integer is a palindrome by converting to string.
+     * Time Complexity: O(n), Space Complexity: O(n)
+     * 
+     * @param number input integer
+     * @return true if palindrome, else false
      */
     public static boolean isNumberPalindromeString(int number) {
         String s = String.valueOf(number);
@@ -22,11 +25,14 @@ public class Misc {
     }
 
     /**
-     * Check if a number is a palindrome using numeric reversal (optimized).
-     * Time: O(log n), Space: O(1)
+     * Check if an integer is a palindrome using numeric reversal.
+     * Time Complexity: O(log n), Space Complexity: O(1)
+     * 
+     * @param number input integer
+     * @return true if palindrome, else false
      */
     public static boolean isNumberPalindromeInt(int number) {
-        if (number < 0) return false; // negative numbers are not palindromes
+        if (number < 0) return false;  // Negative numbers are not palindrome
 
         int original = number;
         int reversed = 0;

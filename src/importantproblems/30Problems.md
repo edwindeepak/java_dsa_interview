@@ -16,9 +16,9 @@
 - [ X ] **8. Count Character Frequencies** — *StringUtils*
 - [ X ] **9. First Non-Repeating Character** — *StringUtils*
 - [ X ] **10. Remove Duplicates from Array** — *ArrayUtils*
-- [ ] **11. Remove Duplicates from String** — *StringUtils*
-- [ ] **12. Find Missing Number in Array** — *ArrayUtils*
-- [ ] **13. Second Largest Number in Array** — *ArrayUtils*
+- [ X ] **11. Remove Duplicates from String** — *StringUtils*
+- [ X ] **12. Find Missing Number in Array** — *ArrayUtils*
+- [ X ] **13. Second Largest Number in Array** — *ArrayUtils*
 - [ ] **14. Maximum and Minimum in Array** — *ArrayUtils*
 - [ ] **15. Intersection of Two Arrays** — *ArrayUtils*
 - [ ] **16. Merge Two Sorted Arrays** — *ArrayUtils*
