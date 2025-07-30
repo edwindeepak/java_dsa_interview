@@ -19,8 +19,8 @@
 - [ X ] **11. Remove Duplicates from String** — *StringUtils*
 - [ X ] **12. Find Missing Number in Array** — *ArrayUtils*
 - [ X ] **13. Second Largest Number in Array** — *ArrayUtils*
-- [ ] **14. Maximum and Minimum in Array** — *ArrayUtils*
-- [ ] **15. Intersection of Two Arrays** — *ArrayUtils*
+- [ X ] **14. Maximum and Minimum in Array** — *ArrayUtils*
+- [ X ] **15. Intersection of Two Arrays** — *ArrayUtils*
 - [ ] **16. Merge Two Sorted Arrays** — *ArrayUtils*
 - [ ] **17. Sort an Array (without built-in)** — *ArrayUtils*
 - [ ] **18. Binary Search in Sorted Array** — *ArrayUtils*
